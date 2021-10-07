@@ -1,0 +1,175 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Users\colin\Desktop\DevWorkspace\kgdd
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 177
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 45
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: null
+    title: KGDD
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "#012456"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 801
+    content: "\e[2J\e[m\e[HWindows PowerShell\r\nCopyright (C) Microsoft Corporation. All rights reserved.\r\n\r\nTry the new cross-platform PowerShell https://aka.ms/pscore6\e]0;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 21
+    content: "\e[25l\e[6;1H\e[?25h"
+  - delay: 108
+    content: 'PS C:\Users\colin\Desktop\DevWorkspace\kgdd> '
+  - delay: 699
+    content: "\e[?25l"
+  - delay: 22
+    content: "\e[93mterminalizer\e[m record demo\e[?25h"
+  - delay: 180
+    content: "\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[6;46Hclear\e[m\e[19X\e[?25h"
+  - delay: 358
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;46Hkgdd\e[m \e[90m-t\e[m .\\Src\\test\\testbed2.json \e[90m-f\e[m ..\\sonar2021_demo\\polifonia_places_etl\\kg\\polifonia-kg-places-latest.ttl\e[?25h"
+  - delay: 851
+    content: "\r\n"
+  - delay: 333
+    content: "\r\n"
+  - delay: 15
+    content: "\e[94m* * * * * * *  * * * \e[m\e[66X\e[94m\r\n * * * KGT run * * * \e[m\e[66X\e[94m\r\n* * * * * * *  * * * \e[m\e[66X\r\n\e[87X\e[96m\r\n[*]\e[m reading testbed .\\Src\\test\\testbed2.json\e[43X\e[96m\r\n[*]\e[m parsing KG ..\\sonar2021_demo\\polifonia_places_etl\\kg\\polifonia-kg-places-latest.ttl\r\n"
+  - delay: 559
+    content: "\r\n"
+  - delay: 21
+    content: "\e[96m[*]\e[m Running Test 1: Expected Recordings Count\r\n"
+  - delay: 1206
+    content: "\e[92m[+] \e[m    \e[92mTest passed: expected rows count correct 725"
+  - delay: 25
+    content: "\e[25l\e[m\e[96m\e[18;1H[*]\e[m Running Test 2: Expected Artist Count\e[11X\e[92m\r\n[+] \e[m    \e[92mTest passed: expected rows count correct 103\e[m\r\n\e[52X\e[96m\r\n[*]\e[m Running Test 3: Expected Places Count\e[11X\e[92m\r\n[+] \e[m    \e[92mTest passed: expected rows count correct 37\e[m \r\n\e[52X\e[96m\r\n[*]\e[m Running Test 4: Expected Sessions Count\e[9X\r\n\e[?25h"
+  - delay: 20
+    content: "\e[92m[+] \e[m    \e[92mTest passed: expected rows count correct 673\e[m\r\n\e[52X\e[96m\r\n[*]\e[m Running Test 5: Expected Song with 2 artists    \r\n"
+  - delay: 111
+    content: "\e[92m[+] \e[m    \e[92mTest passed: expected rows count correct 14"
+  - delay: 18
+    content: "\e[25l\e[m\e[96m\e[30;1H[*]\e[m Running Test 6: Expected Song with 3 artists\r\n\e[?25h"
+  - delay: 105
+    content: "\e[92m[+] \e[m    \e[92mTest passed: expected rows count correct 1"
+  - delay: 23
+    content: "\e[25l\e[m\e[96m\e[33;1H[*]\e[m Testbed complete. Passed 6 Failed 0\e[92m\r\n[+] All test passed! :-)\e[m\e[15X\r\n\e[?25h"
+  - delay: 52
+    content: 'PS C:\Users\colin\Desktop\DevWorkspace\kgdd> '
+  - delay: 1016
+    content: "\e[?25l"
+  - delay: 14
+    content: "\e[93me\e[?25h"
+  - delay: 82
+    content: "\e[m\e[?25l"
+  - delay: 9
+    content: "\e[93m\bex\e[?25h"
+  - delay: 143
+    content: "\e[m\e[?25l"
+  - delay: 26
+    content: "\e[93m\e[35;46Hexi\e[?25h"
+  - delay: 86
+    content: "\e[m\e[?25l"
+  - delay: 14
+    content: "\e[92m\e[35;46Hexit\e[?25h"
+  - delay: 450
+    content: "\e[m\r\n"

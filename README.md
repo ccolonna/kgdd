@@ -2,6 +2,7 @@
 
 KG Test Driven Design development. Write queries with expected results. CONSTRUCT KG. Run tests and see if queries return correct bindings.
 
+![screen-gif](./assets/example.gif)
 
 ## Run tests
 
