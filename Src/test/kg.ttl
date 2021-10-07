@@ -1,0 +1,12 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ex: <http://example.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+ex:artist_1 a ex:Artist ;
+            rdfs:label "Jhon Lennon"^^xsd:string .
+
+ex:artist_2 a ex:Artist ;
+            rdfs:label "Paul McCartney"^^xsd:string .
+

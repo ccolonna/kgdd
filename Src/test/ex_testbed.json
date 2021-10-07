@@ -1,0 +1,28 @@
+{
+    "tests" : [
+        {
+            "description" : "Extract authors test",
+            "query" : "SELECT ?author WHERE {?author ?p ?o} ",
+            "results" : 3,
+            "rows": [{
+                "author" : "http://example.org/artist_1"
+            }            ],
+
+            "bindings": {
+                "author" : "http://example.org/artist_1"
+            },
+            "skip": false
+        },
+        {
+            "description" : "Dumb working test",
+            "query" : "SELECT ?author WHERE {?author ?p ?o} ",
+            "results" : -1,
+            "rows": [],
+
+            "bindings": {},
+
+            "skip": false
+        }
+
+    ]
+}
