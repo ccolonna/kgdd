@@ -6,8 +6,6 @@ from kgdd.kg_reader import KGReader
 from kgdd.logger import Logger
 from kgdd.test_file_parser import TestFileParser
 from kgdd.kg_tester import KGTester
-from kgdd.test_file import TestFile
-from kgdd.test import Test
 
 # Cli for the package
 
@@ -18,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description=CLI_DESCRIPTION)
     parser.add_argument("-t", "--test", help="Path to testbed file. File should be in Json format", type=str, required=True)
     parser.add_argument("-f", "--file", help="Path to KG file", type=str, required=True)
-    parser.add_argument("-v", "--verbose", help="Verbose output. Verbosity level = 0,1,2 . Default 0 no verbose. 2 is really verbose", choices=[0,1,2], default=0)
+    parser.add_argument("-v", "--verbose", help="Verbose output. Verbosity level = 0,1,2 . Default 0 no verbose. 2 is really verbose", choices=[0,1,2], default=0, type=int)
 
     args = parser.parse_args()
     

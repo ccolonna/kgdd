@@ -119,7 +119,7 @@ class KGTester:
                     self.__logger.verbose_debug(f"binding not found for variable {variable_name} in row ${row}")
 
         try:
-            assert binding_check_results.keys() == expected_bindings.keys()
+            assert sorted(binding_check_results.keys()) == sorted(expected_bindings.keys())
             self.__logger.log_correct(f"\tTest passed: expected bindings are correct {expected_bindings}")
             self.add_test_passed()
         except:
@@ -133,12 +133,15 @@ class KGTester:
 
         expected_row_results = []
 
+
         for row in rows:
             for expected_row in expected_rows:
                 variables = expected_row.keys()
                 try:
                     # we want all the bindings of expected row the same as found row 
                     for variable in variables:
+                        # will be used to sort arrays
+                        sorting_variable = variable
                         assert str(row[variable]) == expected_row[variable]
                     if expected_row not in expected_row_results:
                         expected_row_results.append(expected_row)
@@ -146,14 +149,14 @@ class KGTester:
                     pass
         
         try:
-            assert expected_row_results == expected_rows
+            assert sorted(expected_row_results,  key=lambda d: d[sorting_variable]) == sorted(expected_rows, key=lambda d: d[sorting_variable])
             self.__logger.log_correct(f"\tTest passed: expected rows {expected_rows} found rows {expected_row_results}")
             self.add_test_passed()
         except:
             self.__logger.log_error(f"\tTest failed: expected rows {expected_rows} found rows {expected_row_results}")
             self.add_test_failed()
 
-        self.__logger.verbose_debug(f"Found rows: {rows}, expected rows {expected_rows}, expected row results {expected_row_results}, {expected_rows == expected_row_results }")
+        self.__logger.verbose_debug(f"Found rows: {rows}, expected rows {expected_rows}, expected row results {expected_row_results}")
 
         pass
 
